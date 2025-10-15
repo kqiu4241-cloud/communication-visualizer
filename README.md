@@ -8,6 +8,7 @@ python app.py
 2.  Keep Terminal Open
 - Leave the backend terminal running
 - Do not close this terminal window
+
 3. Start Frontend Development Server
 ```powershell
 cd communication-visualizer\frontend
