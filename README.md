@@ -4,6 +4,7 @@
 cd communication-visualizer\backend
 .\venv\Scripts\activate
 python app.py
+```
 
 2.  Keep Terminal Open
 - Leave the backend terminal running
@@ -13,6 +14,8 @@ python app.py
 ```powershell
 cd communication-visualizer\frontend
 npm run dev
+```
 **console output**
 ```arduino
 Local: http://localhost:5173/
+```
