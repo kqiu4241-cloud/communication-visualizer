@@ -1,0 +1,13 @@
+# 统一换行符处理
+* text=auto
+
+# 明确文本文件使用 LF
+*.vue text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+
+# Windows 相关文件保持 CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf

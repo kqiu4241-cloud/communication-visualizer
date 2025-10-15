@@ -1,8 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import SignalVisualizer from '../components/SignalVisualizer.vue'
+import VideoPlayer from '../components/VideoPlayer.vue'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
+const routes = [
+  { path: '/', component: SignalVisualizer },
+  { path: '/video', component: VideoPlayer }
+]
+
+export default createRouter({
+  history: createWebHistory(),
+  routes
 })
-
-export default router

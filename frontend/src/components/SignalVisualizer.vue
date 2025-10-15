@@ -22,12 +22,18 @@
       <p>信噪比：{{ result.snr_db }} dB</p>
       <p>丢包率：{{ result.packet_loss }} %</p>
     </div>
+        <!-- 新增的按钮 -->
+    <div class="jump">
+      <button @click="goToVideo">🎥 流媒体通信演示</button>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const source = ref('A')
 const destination = ref('B')
 const result = ref(null)
@@ -46,6 +52,9 @@ async function startSimulation() {
 
   // 动画结束
   setTimeout(() => (isAnimating.value = false), 1500)
+}
+function goToVideo() {
+  router.push('/video')
 }
 </script>
 
@@ -133,5 +142,18 @@ async function startSimulation() {
   border-radius: 10px;
   box-shadow: 0 0 10px #00bcd4;
   display: inline-block;
+}
+.jump button {
+  margin-top: 20px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.jump button:hover {
+  background: #43a047;
 }
 </style>
